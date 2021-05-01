@@ -1,0 +1,129 @@
+<mat-expansion-panel hideToggle>
+    <mat-expansion-panel-header>
+        <mat-panel-title>
+            <img src="../../assets/scs.png">
+        </mat-panel-title>
+        <mat-panel-description>
+            <br>
+            Op dinsdag 9 maart en woensdag 10 maart 2021 vond de Cyber Security Challenge plaats. 
+            Doordat Covid-19 ons leven op het moment beperkt vond dit evenement uiteraard online plaats.
+            Met volle teugen keek ik uit naar deze dagen. Gedurende de opleidingsonderdelen Security Essentials 
+            en Security Advande d maakte ik kennis met heel wat aspecten rondom CTF-platformen. 
+            Ik leerde werken met OWASP, Juice Shop en Metasploitable. Hierin kreeg ik de kans om challenges op te lossen. 
+            Challenges waarmee ik te maken kreeg gedurende deze opleidingsonderdelen waren onder andere het uitvoeren van XSS 
+            (Cross Site Scripting) en het inloggen met het administratoraccount door middel van SQL injection. 
+            Daarnaast is het ook een leuke uitdaging om zelf eens aan te slag gaan om een CTFS-platform (Capture The Flag Strike) op te lossen. 
+            Al snel begon ik met de eerste challenges. Het was voor mij een lastige zaak omdat mijn kennis toch wel zeer beperkt was. 
+            Mits ik een doorzetter ben speelde dit uiteraard in mijn voordeel. 
+            Daarnaast is het ook een leuke uitdaging om zelf eens aan te slag gaan om een CTFS-platform (Capture The Flag Strike) op te lossen. 
+            Mijn team was zeer gedreven. Zo eindigden we de qualifiers op de éénenvijftigste plaats met 370 punten.
+            Omdat de eerste zestig teams doorgaan naar de finals werd mijn team geselecteerd om deel te nemen aan deze finals. 
+            Mits mijn achtergrond wat betreft CTFS-platformen best laag is en ik mijn team de kans wilde geven om de finals te winnen besloot 
+            ik om niet deel te nemen. Na de finals heb ik gevraagd om uitleg te krijgen in zake challenges die opgelost werden. Zo kon ik dusdanig mijn 
+            kennis vergroten.
+        </mat-panel-description>
+    </mat-expansion-panel-header>
+</mat-expansion-panel>
+<mat-expansion-panel hideToggle>
+    <mat-expansion-panel-header>
+        <mat-panel-title>
+            <img src="../../assets/csc_flag.png">
+        </mat-panel-title>
+        <mat-panel-description>
+            Een flag dat ik oploste was "Empty challenge". Ik vond een link met een tekstbestandje dat me naar een webpagina leidde.
+            Deze pagina was op het eerste zicht leeg, daarom ook “empty challenge”. Dit vond ik enorm raar dus gebruikte ik sneltoetsen 
+            zoals “control – a” om zo te kijken of er misschien tekst te zien was dat verborgen / niet leesbaar zou zijn.
+            Al snel bleek mijn gevoel juist te zitten.
+            Ik kopieerde en plakte de “verborgen” tekst in een Word-document en gebruikte de knop “Alles weergeven” (het ankertje)
+            om zo na te gaan wat er zou staan. 
+            Nadien zag ik heel wat puntjes en tabs verschijnen wat een zeer interessant gegeven was.
+            Ik vond dus twee symbolen (punt en tab) dus dacht ik aan het binair stelsel (twee cijfers: nul en één).
+            Ik verving al de tabs naar een nul en al de puntjes naar een één. Hiervoor maakte ik gebruik van de functie “Zoeken en vervangen”
+            in Word.
+            Een volgend vermoeden dat ik kreeg was dat wanneer al de binaire getallen omgezet werden naar ASCII
+            waardes dat dan de flag tevoorschijn zou komen.
+            Mijn vermoeden klopte en had de flag gevonden, namelijk CSC&#123;e4e8d5ce6e5dfe0bb0c03fe87b86a97&#125;
+        </mat-panel-description>
+    </mat-expansion-panel-header>
+</mat-expansion-panel>
+
+<mat-expansion-panel hideToggle>
+    <mat-expansion-panel-header>
+        <mat-panel-title>
+            <img src="../../assets/csc_flag_blind_and_blinder.png">
+        </mat-panel-title>
+        <mat-panel-description>
+            Toen ik de challenge “Blind and Blinder” open klikte zag ik een link, “blindandblinder.txt”. 
+            Ik klikte op de link en zag opnieuw een lege webpagina. 
+            Aan de hand van “control-a” keek ik of tekst of dergelijke op de webpagina aanwezig was.
+            Op het internet ging ik opzoek naar een whitespace converter om zo de witte spaties, 
+            tabs en regels uit het document te halen. 
+            Ik plakte de inhoud van de webpagina in deze whitespace converter en in het tabblad “Memory” kreeg 
+            ik een array terug met verschillende getallen. Deze stonden opgeslagen in de stack.
+            Ik raadpleegde een converter waarmee ik decimale getallen naar ASCII waardes kon omzetten.
+            Ik had de flag gevonden. De flag die ik gevonden had stond in omgekeerde volgorde, “&#123;!w0n_33s_n@c_1&#125;CSC”.
+            De flag was dus: CSC&#123;1_c@n_s33_n0w!&#125;
+                
+        </mat-panel-description>
+    </mat-expansion-panel-header>
+</mat-expansion-panel>
+
+
+<mat-expansion-panel hideToggle>
+    <mat-expansion-panel-header>
+        <mat-panel-title>
+            <img src="../../assets/csc_flag2.png" height="50%">
+        </mat-panel-title>
+        <mat-panel-description>
+            <div>
+            Bij het open klikken van deze challenge zag ik een url staan. Ik klikte op deze url en zag onderstaand scherm.
+            Na lang nadenken en zoeken dacht ik eens een kijkje te nemen in het robots.txt bestand.
+            Ik zag hier een deel van een link verschijnen met “Disallow”, wat verbieden betekent. Ik kon mijn nieuwsgierigheid niet bedwingen 
+            en wilde al snel naar de pagina “secret_admin_page” navigeren. 
+            Ik gaf deze link in de adresbalk in en zag de content van de “secret_admin_page”. Hier kon ik inloggen met een gebruikersnaam
+            en een wachtwoord.
+            Aan de hand van onderstaande website kreeg ik een beeld van wat local file inclusion is. Verder zag ik ook parameters
+            die ik in de url kon meegeven om zo een php filter te gebruiken voor local file inclusion. 
+            Al snel probeerde ik heel wat combinaties uit.
+        </div>
+        <div>
+            <br>
+            <ul style="width: 100%;">
+                1)	54.170.100.153/?page=php://filter/convert.base64-encode/resource=index
+                <br>
+                 2)	54.170.100.153/?page=php://filter/convert.base64-encode/resource=about
+                 <br>
+                3)	54.170.100.153/?page=php://filter/convert.base64-encode/resource=contact
+                <br>
+                 4)	54.170.100.153/?page=php://filter/convert.base64-encode/resource=secret_admin_page
+            </ul>
+        </div>
+        <div>
+            Bij al deze combinaties zag ik telkens een lange string op de webpagina staan. De index-pagina had dit wel niet.
+            Iedere string plakte ik in een “From Base64” converter. Op de volgende pagina wordt dit voor de laatste 
+            combinatie besproken omdat deze mij ook de juiste php-webpagina terug gaf.
+            De gevonden string plakte ik in een “From Base64” converter om zo te kijken wat er eigenlijk achter deze string schuilt.
+            Ik gebruikte een “From Base64” converter omdat de php filter “convert.base64-encode” bevat.
+            Toen ik de output zag kon ik mijn ogen niet geloven. De geëncrypteerde string bevat de code van de webpagina. 
+            Zo bestaat een functie “check_hash($password)” dat nagaat of het wachtwoord een md5-hash is.
+            Vervolgens wordt er gekeken of de gebruikersnaam die ingegeven wordt “MrAdmin” is,
+            de lengte van het ingegeven wachtwoord moet groter of gelijk zijn aan 14 en de md5-hash van het ingegeven 
+            wachtwoord moet overeenkomen met de md5-hash die aangemaakt is in de functie “check_hash()”.
+            
+            Een webpagina vertelde mij dat “magic” hashes bestaan. Als een hash begint met een “0” en het tweede karakter is een “e” 
+            dan heb je dus een magic hash. 
+            Nul tot de nulde is altijd nul. Dit betekent hier dus ook dat het de waarde “true” krijgt.
+            Ten slotte gaf ik de credentials nog in op de webpagina “Secret_admin_page”. 
+            De gebruikersnaam was “MrAdmin” omdat ik deze kon aflezen in de gedecodeerde php-functie.
+            Het wachtwoord was dus “Password147186970!” dat ik vond op de website ”whitehatsec.com”.
+
+            Zo, deze flag is ook gevonden, namelijk CSCBE&#123;130ccbac716019055f3614bf53769b91&#125;
+        </div>
+        </mat-panel-description>
+    </mat-expansion-panel-header>
+</mat-expansion-panel>
+
+<br>
+<br>
+<br>
+<footer style="text-align: center;">&copy; Copyright 2021 Jarne Meekers</footer>

@@ -1,0 +1,25 @@
+<div class="imgdiv" style="width: fit-content;">
+   <table>
+
+   </table>
+   <img src="../../assets/inUits.png" width="300" height="150"/>
+   <img src="../../assets/mendix.png" width="300" height="150" (click)="onClick('mendix')"/>
+   <br>
+   <img src="../../assets/secwise.png" width="300" height="150"/>
+   <img src="../../assets/Fourcast.png" width="300" height="150"/>
+   <br>
+   <img src="../../assets/Ericsson.png" width="300" height="150" (click)="onClick('ericson')"/>
+   <img src="../../assets/gluo.png" width="300" height="150" (click)="onClick('gluo')"/>
+   <br>
+   <img src="../../assets/FedPol.jpg" width="300" height="150" (click)="onClick('fedpol')"/>   
+   <br>
+   <br>
+   <br>
+   <br>
+   <br>
+   <footer style="text-align: center;">&copy; Copyright 2021 Jarne Meekers</footer>
+</div>
+
+<div class="pdfviewer">
+   <pdf-viewer *ngIf="pdfSrc != null" [src]="pdfSrc" [render-text]="true" style="display: block;"></pdf-viewer>
+</div>

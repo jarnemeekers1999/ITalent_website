@@ -1,0 +1,33 @@
+<div class="page-container">
+  <header>
+    <div>
+      <button mat-button class="menu-button" (click)="sidenav.toggle()">
+        <mat-icon>{{ isMenuOpen ? 'menu_open' : 'menu' }}</mat-icon>
+      </button>
+
+      <a routerLink="/">
+        <span class="app-title">Jarne Meekers</span>
+      </a>
+    </div>
+  </header>
+  <mat-sidenav-container class="sidenav-container">
+    <mat-sidenav #sidenav autoFocus="false" mode="over" [(opened)]="isMenuOpen" class="sidenav">
+      <img src="../assets/176786893_664352674357982_682287138359141042_n.png" alt="Avatar">
+      <p class="name-title">Jarne Meekers</p>
+      <mat-divider></mat-divider>
+      <a mat-button routerLink="/home">Home</a>
+      <a mat-button routerLink="/seminaries">Seminaries</a>
+      <a mat-button routerLink="/PersoonlijkeOntwikkeling">Persoonlijke ontwikkeling</a>
+      <a mat-button routerLink="/innovatieroute">Innovatieroute</a>
+      <a mat-button routerLink="/StudentEngagement">Student engagement</a>
+      <a mat-button routerLink="/reflectie">Reflectie</a>
+      <a mat-button routerLink="/portofolio">Portfolio</a>
+      <a mat-button routerLink="/cv">Cv</a>
+    </mat-sidenav>
+    <mat-sidenav-content>
+      <main>
+        <router-outlet></router-outlet>
+      </main>
+    </mat-sidenav-content>
+  </mat-sidenav-container>
+</div>
